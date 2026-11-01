@@ -1,0 +1,88 @@
+/* ============================================================
+   ARCHITECTURAL IMAGE CONTAINER & LOADER (ImagePlaceholder.css)
+   ============================================================ */
+
+.arch-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-xs);
+}
+
+.arch-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.6s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+}
+
+.arch-image--loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arch-image-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-secondary) 0%,
+    var(--color-border-subtle) 50%,
+    var(--color-bg-secondary) 100%
+  );
+  background-size: 200% 100%;
+  animation: archSkeletonPulse 1.8s ease-in-out infinite;
+  transition: opacity 0.4s ease;
+}
+
+.arch-image-skeleton--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes archSkeletonPulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.arch-image-fallback {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+  background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.arch-image-fallback__texture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+.arch-image-fallback__tag {
+  position: relative;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+}
