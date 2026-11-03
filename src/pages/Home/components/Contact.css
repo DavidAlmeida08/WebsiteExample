@@ -219,3 +219,22 @@
   gap: var(--space-4);
   margin-top: var(--space-2);
 }
+
+.contact__service-notice {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact__service-notice a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact__form-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}

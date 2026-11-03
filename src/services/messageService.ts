@@ -5,10 +5,15 @@ export interface MessageResult {
   message: string;
 }
 
+export const MESSAGE_SERVICE_ENABLED = false;
+export const MESSAGE_SERVICE_DISABLED_MESSAGE =
+  'O envio de mensagens est\u00e1 temporariamente indispon\u00edvel.';
+
 export async function sendMessage(formData: InquiryForm): Promise<MessageResult> {
+  void formData;
 
   return {
-    success: true,
-    message: 'Pedido validado. O envio real de mensagens ainda não está configurado.',
+    success: false,
+    message: MESSAGE_SERVICE_DISABLED_MESSAGE,
   };
 }

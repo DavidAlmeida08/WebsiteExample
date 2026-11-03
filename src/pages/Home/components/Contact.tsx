@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import type { FormEvent, ChangeEvent } from 'react';
 import { CONTACT_INFO } from '../../../data/profile';
-import { sendMessage } from '../../../services/messageService';
+import {
+  MESSAGE_SERVICE_DISABLED_MESSAGE,
+  MESSAGE_SERVICE_ENABLED,
+  sendMessage,
+} from '../../../services/messageService';
 import type { InquiryForm, FormStatus } from '../../../types';
 import './Contact.css';
 
@@ -36,6 +40,13 @@ export default function Contact() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    if (!MESSAGE_SERVICE_ENABLED) {
+      setStatus('error');
+      setFeedback(MESSAGE_SERVICE_DISABLED_MESSAGE);
+      return;
+    }
+
     setStatus('loading');
     setFeedback('');
 
@@ -217,9 +228,15 @@ export default function Contact() {
               )}
 
               <div className="contact__form-actions">
+                {!MESSAGE_SERVICE_ENABLED && (
+                  <p className="contact__service-notice" role="status">
+                    {MESSAGE_SERVICE_DISABLED_MESSAGE} Contacte-nos através de{' '}
+                    <a href={`mailto:${CONTACT_INFO.email}`}>{CONTACT_INFO.email}</a>.
+                  </p>
+                )}
                 <button
                   type="submit"
-                  disabled={status === 'loading'}
+                  disabled={!MESSAGE_SERVICE_ENABLED || status === 'loading'}
                   className="btn-pill btn-pill--primary"
                 >
                   {status === 'loading' ? 'A enviar formulário...' : 'Enviar Mensagem'}
