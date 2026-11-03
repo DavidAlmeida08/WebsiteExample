@@ -1,139 +1,139 @@
 /* ============================================================
-   ABOUT SECTION (Bento Grid Narrative)
-   ============================================================ */
+    ABOUT SECTION (Bento Grid Narrative)
+    ============================================================ */
 
 .about {
-  padding: var(--space-24) 0;
-  background-color: var(--color-bg);
-  border-top: 1px solid var(--color-border);
+    padding: var(--space-24) 0;
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
 }
 
 .about__header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  margin-bottom: var(--space-16);
-  max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-16);
+    max-width: 800px;
 }
 
 /* Bento Grid */
 .about__bento {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-5);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
 }
 
 @media (min-width: 900px) {
-  .about__bento {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .about__bento {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Portrait Card */
 .about__bento-portrait {
-  position: relative;
-  background-color: var(--color-bg-secondary);
-  border-radius: var(--radius-xs);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
+    position: relative;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-xs);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
 }
 
 @media (min-width: 900px) {
-  .about__bento-portrait {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-  }
+    .about__bento-portrait {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
 }
 
 .about__bento-portrait .arch-image-wrap {
-  border-radius: 0;
-  height: 100%;
+    border-radius: 0;
+    height: 100%;
 }
 
 .about__portrait-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-6);
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.3) 60%,
-    transparent 100%
-  );
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-6);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.3) 60%,
+        transparent 100%
+    );
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .about__portrait-name {
-  font-size: 20px;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: -0.02em;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.02em;
 }
 
 .about__portrait-title {
-  font-size: 13px;
-  color: #a1a1a6;
-  letter-spacing: -0.01em;
+    font-size: 13px;
+    color: #a1a1a6;
+    letter-spacing: -0.01em;
 }
 
 /* Narrative Card */
 .about__bento-narrative {
-  background-color: var(--color-bg-secondary);
-  border-radius: var(--radius-xs);
-  padding: clamp(24px, 4vw, 40px);
-  border: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  justify-content: center;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-xs);
+    padding: clamp(24px, 4vw, 40px);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
 }
 
 @media (min-width: 900px) {
-  .about__bento-narrative {
-    grid-column: 2 / 4;
-  }
+    .about__bento-narrative {
+        grid-column: 2 / 4;
+    }
 }
 
 .about__kicker {
-  font-size: var(--text-md);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--color-text-primary);
+    font-size: var(--text-md);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-text-primary);
 }
 
 .about__bio-text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  font-size: clamp(16px, 1.3vw, 18px);
-  line-height: 1.55;
-  color: var(--color-text-primary);
-  letter-spacing: -0.015em;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    font-size: clamp(16px, 1.3vw, 18px);
+    line-height: 1.55;
+    color: var(--color-text-primary);
+    letter-spacing: -0.015em;
 }
 
 /* Pillars Cards */
 
 .about__pillar-number {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-blue);
-  letter-spacing: 0.02em;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-blue);
+    letter-spacing: 0.02em;
 }
 
 .about__pillar-title {
-  font-size: 19px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--color-text-primary);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
 }
 
 .about__pillar-desc {
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--color-text-secondary);
-  letter-spacing: -0.01em;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    letter-spacing: -0.01em;
 }

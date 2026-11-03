@@ -6,13 +6,13 @@ import Contact from './components/Contact';
 import './Home.css';
 
 export default function Home() {
-  return (
-    <div className="home-page">
-      <Hero />
-      <About />
-      <Portfolio />
-      <Services />
-      <Contact />
-    </div>
-  );
+    return (
+        <div className="home-page">
+            <Hero />
+            <About />
+            <Portfolio />
+            <Services />
+            <Contact />
+        </div>
+    );
 }
