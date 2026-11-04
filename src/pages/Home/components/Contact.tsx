@@ -236,8 +236,8 @@ export default function Contact() {
                                 )}
                                 <button
                                     type="submit"
-                                    disabled={!MESSAGE_SERVICE_ENABLED || status === 'loading'}
                                     className="btn-pill btn-pill--primary"
+                                    disabled={!MESSAGE_SERVICE_ENABLED || status === 'loading'}
                                 >
                                     {status === 'loading' ? 'A enviar formulário...' : 'Enviar Mensagem'}
                                 </button>

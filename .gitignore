@@ -26,3 +26,4 @@ dist-ssr
 # Others
 .env
 agents.md
+.vercel

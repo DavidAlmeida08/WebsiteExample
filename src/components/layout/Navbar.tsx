@@ -86,8 +86,8 @@ export default function Navbar() {
                     </a>
                 </nav>
                 <p className="navbar__drawer-contact">
-                    <a href="mailto:atelier@anaferreira.pt">atelier@anaferreira.pt</a>
-                    <span>+351 21 347 89 00</span>
+                    <a href="mailto:atelier@anaferreira.pt">email@email.pt</a>
+                    <span>+351 926384022</span>
                 </p>
             </div>
 
