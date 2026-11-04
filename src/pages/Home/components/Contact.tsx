@@ -22,7 +22,7 @@ const SUBJECT_OPTIONS = [
     'Reabilitação de Património',
     'Projeto Comercial ou Sede',
     'Design de Interiores & Remodelação',
-    'Estudo de Viabilidade / PIP',
+    'Estudo de Viabilidade',
     'Outro Assunto',
 ];
 
